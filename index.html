@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/features-tabs.js"></script>
+    <title>Device</title>
+  </head>
+  <body>
+    <header class="header-main container" id="header-block">
+      <a href="index.html">
+        <h1 class="header-logo gilroy-700">Device</h1>
+      </a>
+      <nav class="main-nav">
+        <div class="main-nav--first-line">
+          <div class="search-container">
+            <input
+              class="search-box"
+              type="text"
+              placeholder="Поиск по сайту"
+            />
+            <button class="search-button">Найти</button>
+          </div>
+          <div class="header-account-navigation">
+            <a class="icon-before sign-in" href="#">Войти</a>
+            <a class="icon-before compare" href="#">Сравнить</a>
+            <a class="icon-before cart" href="#">Корзина</a>
+          </div>
+        </div>
+        <div class="main-nav--second-line gilroy-700 uppercase-link">
+          <a
+            onmouseover="showMenu()"
+            onmouseleave="closeMenu()"
+            class="catalog"
+            href="catalog.html"
+            id="catalog"
+            >Каталог товаров</a
+          >
+          <ul class="shipment-warranty-contacts-header">
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Гарантия</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+        <ul
+          class="catalog-list"
+          id="menu"
+          onmouseover="showMenu()"
+          onmouseleave="closeMenu()"
+        >
+          <li><a href="#">Виртуальная реальность</a></li>
+          <li><a href="#">Моноподы для селфи</a></li>
+          <li><a href="#">Экшн-камеры</a></li>
+          <li><a href="#">Фитнес-браслеты</a></li>
+          <li><a href="#">Умные часы</a></li>
+          <li><a href="#">Квадрокоптеры</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <section class="section-goods">
+          <div class="goods-slider-switchers">
+            <i
+              class="goods-slider-switcher active"
+              onclick="openSlide(event, 'slide-1')"
+            ></i>
+            <i
+              class="goods-slider-switcher"
+              onclick="openSlide(event, 'slide-2')"
+            ></i>
+            <i
+              class="goods-slider-switcher"
+              onclick="openSlide(event, 'slide-3')"
+            ></i>
+          </div>
+          <!-- Slide 1 -->
+          <div id="slide-1" class="goods-item">
+            <div class="goods-image-container">
+              <img
+                class="goods-item--image"
+                src="images/content/slider-1.png"
+                height="485px"
+              />
+            </div>
+            <div class="goods-item--text">
+              <h2 class="heading-big gilroy-700">
+                Делай селфи, <br />
+                как Бен Стиллер!
+              </h2>
+              <p class="goods-item--description">
+                Самая длинная палка для селфи доступна в нашем магазине. Восемь
+                (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
+              </p>
+              <a class="btn btn--details gilroy-700 uppercase-link" href=""
+                >Подробнее</a
+              >
+              <div class="goods-item--characteristics">
+                <div class="goods-item--characteristic">
+                  <span class="characteristic-value">8,5 м</span>
+                  <span class="characteristic-title">Длина палки</span>
+                </div>
+                <div class="goods-item--characteristic">
+                  <span class="characteristic-value">5 кг</span>
+                  <span class="characteristic-title">Вес палки</span>
+                </div>
+                <div class="goods-item--characteristic">
+                  <span class="characteristic-value">Карбон</span>
+                  <span class="characteristic-title">Материал</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div id="slide-2" class="goods-item">
+            <div class="goods-image-container">
+              <img
+                class="goods-item--image"
+                src="images/content/slider-2.png"
+              />
+            </div>
+            <div class="goods-item--text">
+              <h2 class="heading-big gilroy-700">
+                Худеем <br />
+                правильно!
+              </h2>
+              <p class="goods-item--description">
+                Мотивирующие фитнес-браслеты помогут найти в себе силы не
+                пропускать занятия и соблюдать диету.
+              </p>
+              <a class="btn btn--details gilroy-700 uppercase-link" href=""
+                >Подробнее</a
+              >
+              <div class="goods-item--characteristics">
+                <div class="goods-item--characteristic">
+                  <span class="characteristic-value">48 часов</span>
+                  <span class="characteristic-title">Без подзарядки</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div id="slide-3" class="goods-item">
+            <div class="goods-image-container">
+              <img
+                class="goods-item--image"
+                src="images/content/slider-3.png"
+              />
+            </div>
+            <div class="goods-item--text">
+              <h2 class="heading-big gilroy-700">
+                Порхает как бабочка, жалит как пчела!
+              </h2>
+              <p class="goods-item--description">
+                Этот обычный, на первый взгляд, квадрокоптер оснащен мощным
+                лазером, замаскированным под стандартную камеру.
+              </p>
+              <!-- <div class="details-btn-and-slider-switchers"> -->
+              <a class="btn btn--details gilroy-700 uppercase-link" href=""
+                >Подробнее</a
+              >
+              <div class="goods-item--characteristics">
+                <div class="goods-item--characteristic">
+                  <span class="characteristic-value">800 м</span>
+                  <span class="characteristic-title">Дальность полета</span>
+                </div>
+                <div class="goods-item--characteristic">
+                  <span class="characteristic-value">50 м</span>
+                  <span class="characteristic-title">Радиус поражения</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Goods categories -->
+          <div class="goods-categories">
+            <ul class="goods-categories--list gilroy-700">
+              <li>
+                <a class="goods-categories--item" href="#">
+                  <img class="category-image" src="images/svg/popular-1.svg" />
+                  <span class="category-caption">Виртуальная реальность</span>
+                </a>
+              </li>
+              <li>
+                <a class="goods-categories--item" href="#">
+                  <img
+                    class="category-image monopods"
+                    src="images/svg/popular-2.svg"
+                  />
+                  <span class="category-caption"
+                    >Моноподы <br />
+                    для селфи</span
+                  >
+                </a>
+              </li>
+              <li>
+                <a class="goods-categories--item" href="#">
+                  <img class="category-image" src="images/svg/popular-3.svg" />
+                  <span class="category-caption">Экшн-камеры</span>
+                </a>
+              </li>
+              <li>
+                <a class="goods-categories--item" href="#">
+                  <img class="category-image" src="images/svg/popular-4.svg" />
+                  <span class="category-caption">Фитнес-браслеты</span>
+                </a>
+              </li>
+              <li>
+                <a class="goods-categories--item" href="#">
+                  <img class="category-image" src="images/svg/popular-5.svg" />
+                  <span class="category-caption">Умные часы</span>
+                </a>
+              </li>
+              <li>
+                <a class="goods-categories--item" href="#">
+                  <img class="category-image" src="images/svg/popular-6.svg" />
+                  <span class="category-caption">Квадрокоптеры</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <section class="section-features">
+        <div class="container section-features-container">
+          <ul class="features-list-side-menu gilroy-700 uppercase">
+            <li>
+              <button
+                class="btn features-list-side-menu--item active"
+                onclick="openFeature(event, 'shipment')"
+              >
+                Доставка
+              </button>
+            </li>
+            <li>
+              <button
+                class="btn features-list-side-menu--item"
+                onclick="openFeature(event, 'warranty')"
+              >
+                Гарантия
+              </button>
+            </li>
+            <li>
+              <button
+                class="btn features-list-side-menu--item"
+                onclick="openFeature(event, 'credit')"
+              >
+                Кредит
+              </button>
+            </li>
+          </ul>
+          <div id="shipment" class="features-content">
+            <h3 class="heading-big gilroy-700">Доставка</h3>
+            <p class="feature-description">
+              Мы с удовольствием доставим ваш товар прямо к вашему подъезду
+              совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на
+              ваш этаж.
+            </p>
+          </div>
+          <div id="warranty" class="features-content">
+            <h3 class="heading-big gilroy-700">Гарантия</h3>
+            <p class="feature-description">
+              Если из-за возгорания купленного у нас товара у вас сгорит дом —
+              не переживайте, мы выдадим вам новый. <br />
+              Товар, не дом, конечно же.
+            </p>
+          </div>
+          <div id="credit" class="features-content">
+            <h3 class="heading-big gilroy-700">Кредит</h3>
+            <p class="feature-description">
+              Залезть в долговую яму стало проще! Кредитные консультанты
+              подберут для вас наиболее выгодные условия кредита. Выгодные для
+              нашего банка, разумеется.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-partners">
+        <div class="container partners-container">
+          <img class="partner-logo" src="images/content/logo-1.jpg" />
+          <img class="partner-logo" src="images/content/logo-2.jpg" />
+          <img class="partner-logo" src="images/content/logo-3.jpg" />
+          <img class="partner-logo" src="images/content/logo-4.jpg" />
+        </div>
+      </section>
+
+      <section class="section-about-and-contacts">
+        <div class="container section-about-and-contacts-container">
+          <h2 class="heading-big gilroy-700 row-1">О нас</h2>
+          <p class="row-3">
+            Огромный выбор гаджетов не оставит равнодушным гика, который есть в
+            каждом из нас.
+          </p>
+          <p class="row-5">
+            Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE
+            рабоет со многими транспортными компаниями:
+          </p>
+          <ul class="transportation-companies row-6">
+            <li><strong class="gilroy-700">Деловые линии</strong></li>
+            <li><strong class="gilroy-700">Автотрейдинг</strong></li>
+            <li><strong class="gilroy-700">ЖелДорЭкспедиция</strong></li>
+          </ul>
+          <a class="btn gilroy-700 uppercase-link row-8" href=""
+            >Подробнее о нас</a
+          >
+          <h2 class="heading-big gilroy-700 row-1">Контакты</h2>
+          <p class="row-3">
+            Вы можете забрать товар сами, заехав в наш офис. Заодно, вы можете
+            проверить работоспособность покупки. Всякое бывает.
+          </p>
+          <iframe
+            width="100%"
+            height="220"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1123749473672!2d37.527429316044476!3d55.6870340045298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2sUlitsa%20Stroiteley%2C%2015%2C%20Moskva%2C%20Russia%2C%20119311!5e0!3m2!1sen!2sus!4v1634560006898!5m2!1sen!2sus"
+            class="map row-5-span-2"
+            loading="lazy"
+            >Google maps</iframe
+          >
+          <a class="btn gilroy-700 uppercase-link row-8" href=""
+            >Напишите нам</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <nav class="footer-navigation">
+          <div class="footer-account-navigation">
+            <a href="index.html" class="footer-logo gilroy-700">Device</a>
+            <a class="icon-before sign-in" href="#">Войти</a>
+            <a class="icon-before compare" href="#">Сравнить</a>
+            <a class="icon-before cart" href="#">Корзина</a>
+          </div>
+          <div class="footer-nav--second-line">
+            <address class="address">г. Москва, ул. Строителей, 15</address>
+            <p class="tel">
+              Тел: <a href="tel:+7 (495) 495-95-95">+7 (495) 495-95-95</a>
+            </p>
+            <ul
+              class="
+                gilroy-700
+                uppercase-link
+                shipment-warranty-contacts-footer
+              "
+            >
+              <li><a href="#">Доставка</a></li>
+              <li><a href="#">Гарантия</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </div>
+          <ul class="socials">
+            <li><a class="social-icon facebook" href="#">Facebook</a></li>
+            <li><a class="social-icon instagram" href="#">Instagram</a></li>
+            <li><a class="social-icon twitter" href="#">Twitter</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
