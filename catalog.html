@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/features-tabs.js"></script>
+    <title>Device - Catalog</title>
+  </head>
+
+  <body id="catalog-page">
+    <header class="header-main container" id="header-block">
+      <a href="index.html">
+        <h1 class="header-logo gilroy-700">Device</h1>
+      </a>
+      <nav class="main-nav">
+        <div class="main-nav--first-line">
+          <div class="search-container">
+            <input
+              class="search-box"
+              type="text"
+              placeholder="Поиск по сайту"
+            />
+            <button class="search-button">Найти</button>
+          </div>
+          <div class="header-account-navigation">
+            <a class="icon-before sign-in" href="#">Войти</a>
+            <a class="icon-before compare" href="#">Сравнить</a>
+            <a class="icon-before cart" href="#">Корзина</a>
+          </div>
+        </div>
+        <div class="main-nav--second-line gilroy-700 uppercase-link">
+          <a
+            onmouseover="showMenuCatalog()"
+            onmouseleave="closeMenuCatalog()"
+            class="catalog"
+            href="catalog.html"
+            id="catalog"
+            >Каталог товаров</a
+          >
+          <ul class="shipment-warranty-contacts-header">
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Гарантия</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+        <ul
+          class="catalog-list"
+          id="menu"
+          onmouseover="showMenuCatalog()"
+          onmouseleave="closeMenuCatalog()"
+        >
+          <li><a href="#">Виртуальная реальность</a></li>
+          <li><a href="#">Моноподы для селфи</a></li>
+          <li><a href="#">Экшн-камеры</a></li>
+          <li><a href="#">Фитнес-браслеты</a></li>
+          <li><a href="#">Умные часы</a></li>
+          <li><a href="#">Квадрокоптеры</a></li>
+        </ul>
+      </nav>
+      <div
+        id="yellow-bar"
+        onmouseover="showMenuCatalog()"
+        onmouseleave="closeMenuCatalog()"
+      ></div>
+    </header>
+
+    <main class="main container catalog-container">
+      <section class="product-category">
+        <header class="product-header">
+          <h1 class="heading-big gilroy-700">Моноподы для селфи</h1>
+          <ol class="breadcrumbs">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="catalog.html">Каталог товаров</a></li>
+            <li><a href="#">Моноподы для селфи</a></li>
+          </ol>
+        </header>
+
+        <div class="catalog-flex-container">
+          <div class="filters-panel">
+            <p class="gilroy-700 uppercase-2x_spacing filters-panel-header">
+              Фильтр:
+            </p>
+            <form action="" method="get" class="filters-form">
+              <div
+                class="product-price"
+                role="group"
+                aria-labelled="price-slider"
+                style="--a: 0; --b: 5000; --min: 0; --max: 10000"
+              >
+                <p id="price-slider-label" class="gilroy-700 font-size-18px">
+                  Стоимость
+                </p>
+                <label class="sr-only" for="a">Value A:</label>
+                <input
+                  type="range"
+                  name="price"
+                  id="a"
+                  value="0"
+                  min="0"
+                  max="10000"
+                />
+                <output for="a" style="--c: var(--a)"></output>
+                <label class="sr-only" for="b">Value B:</label>
+                <input
+                  type="range"
+                  name="price"
+                  id="b"
+                  value="5000"
+                  min="0"
+                  max="10000"
+                />
+                <output for="b" style="--c: var(--b)"></output>
+              </div>
+
+              <!-- COLOR -->
+              <div class="product-color flex-for-panel">
+                <p class="gilroy-700 font-size-18px">Цвет</p>
+                <div class="label-and-input">
+                  <input
+                    type="checkbox"
+                    value="black"
+                    name="color"
+                    id="black"
+                  />
+                  <label for="black">Черный</label>
+                </div>
+                <div class="label-and-input">
+                  <input
+                    type="checkbox"
+                    value="white"
+                    name="color"
+                    id="white"
+                  />
+                  <label for="white">Белый</label>
+                </div>
+                <div class="label-and-input">
+                  <input type="checkbox" value="blue" name="color" id="blue" />
+                  <label for="blue">Синий</label>
+                </div>
+                <div class="label-and-input">
+                  <input type="checkbox" value="red" name="color" id="red" />
+                  <label for="red">Красный</label>
+                </div>
+                <div class="label-and-input">
+                  <input type="checkbox" value="pink" name="color" id="pink" />
+                  <label for="pink">Розовый</label>
+                </div>
+              </div>
+
+              <!-- BLUETOOTH -->
+              <div class="bluetooth flex-for-panel">
+                <p class="gilroy-700 font-size-18px">Bluetooth</p>
+                <div class="label-and-input">
+                  <input
+                    type="radio"
+                    value="yes"
+                    name="bluetooth"
+                    id="yes"
+                    checked
+                  />
+                  <label for="yes">Есть</label>
+                </div>
+                <div class="label-and-input">
+                  <input type="radio" value="no" name="bluetooth" id="no" />
+                  <label for="no">Нет</label>
+                </div>
+              </div>
+              <input type="submit" value="" id="show-btn" />
+              <label
+                for="show-btn"
+                class="btn uppercase-link gilroy-700 show-btn"
+                >Показать</label
+              >
+            </form>
+          </div>
+          <div class="products-list-panel">
+            <ul class="sorting">
+              <p class="gilroy-700 uppercase-2x_spacing sorting-header">
+                Сортировка:
+              </p>
+              <li><span class="active">По цене</span></li>
+              <li><span>По типу</span></li>
+              <li><span>По популярности</span></li>
+              <img src="images/svg/icon-up-dir.svg" class="active" />
+              <img src="images/svg/icon-down-dir.svg" />
+            </ul>
+            <div class="products-grid">
+              <div class="product-grid-item">
+                <div class="product-item-img">
+                  <img src="images/content/item-1.jpg" />
+
+                  <button class="btn">В корзину</button>
+                  <button class="add-to-compare">Добавить к сравнению</button>
+                </div>
+
+                <p class="product-caption gilroy-700 font-size-18px">
+                  Любительская селфи-палка
+                </p>
+                <p class="price">500 руб.</p>
+              </div>
+              <div class="product-grid-item">
+                <div class="product-item-img">
+                  <img src="images/content/item-2.jpg" />
+                  <button class="btn">В корзину</button>
+                  <button class="add-to-compare">Добавить к сравнению</button>
+                </div>
+
+                <p class="product-caption gilroy-700 font-size-18px">
+                  Профессиональная <br />
+                  селфи-палка
+                </p>
+                <p class="price">1500 руб.</p>
+              </div>
+              <div class="product-grid-item">
+                <div class="product-item-img">
+                  <img src="images/content/item-3.jpg" />
+                  <button class="btn">В корзину</button>
+                  <button class="add-to-compare">Добавить к сравнению</button>
+                </div>
+
+                <p class="product-caption gilroy-700 font-size-18px">
+                  Непотопляемая селфи-палка
+                </p>
+                <p class="price">2500 руб.</p>
+              </div>
+              <div class="product-grid-item">
+                <div class="product-item-img new">
+                  <img src="images/content/item-4.jpg" />
+                  <button class="btn">В корзину</button>
+                  <button class="add-to-compare">Добавить к сравнению</button>
+                </div>
+
+                <p class="product-caption gilroy-700 font-size-18px">
+                  Селфи-палка "Следуй за <br />
+                  мной"
+                </p>
+                <p class="price">4900 руб.</p>
+              </div>
+            </div>
+            <div class="products-pagination gilroy-700">
+              <a href="#" class="uppercase-2x_spacing">Назад</a>
+              <div class="pagination-center">
+                <a href="#" class="current-page">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+              </div>
+              <a href="#" class="uppercase-2x_spacing">Вперед</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <nav class="footer-navigation">
+          <div class="footer-account-navigation">
+            <a href="index.html" class="footer-logo gilroy-700">Device</a>
+            <a class="icon-before sign-in" href="#">Войти</a>
+            <a class="icon-before compare" href="#">Сравнить</a>
+            <a class="icon-before cart" href="#">Корзина</a>
+          </div>
+          <div class="footer-nav--second-line">
+            <address class="address">г. Москва, ул. Строителей, 15</address>
+            <p class="tel">
+              Тел: <a href="tel:+7 (495) 495-95-95">+7 (495) 495-95-95</a>
+            </p>
+            <ul
+              class="
+                gilroy-700
+                uppercase-link
+                shipment-warranty-contacts-footer
+              "
+            >
+              <li><a href="#">Доставка</a></li>
+              <li><a href="#">Гарантия</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </div>
+          <ul class="socials">
+            <li><a class="social-icon facebook" href="#">Facebook</a></li>
+            <li><a class="social-icon instagram" href="#">Instagram</a></li>
+            <li><a class="social-icon twitter" href="#">Twitter</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

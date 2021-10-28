@@ -52,7 +52,6 @@ function openSlide(evt, slide) {
 }
 
 function showMenu() {
-  let activatingString;
   let headerBlock;
   let menu;
   menu = document.getElementById("menu");
@@ -62,7 +61,6 @@ function showMenu() {
 }
 
 function closeMenu() {
-  let activatingString;
   let headerBlock;
   let menu;
   menu = document.getElementById("menu");
@@ -70,3 +68,31 @@ function closeMenu() {
   headerBlock = document.getElementById("header-block");
   headerBlock.style.zIndex = "0";
 }
+
+function showMenuCatalog() {
+  let menu;
+  menu = document.getElementById("menu");
+  menu.style.display = "grid";
+  let bar;
+  bar = document.getElementById("yellow-bar");
+  bar.style.display = "block";
+}
+
+function closeMenuCatalog() {
+  let menu;
+  menu = document.getElementById("menu");
+  menu.style.display = "none";
+  let bar;
+  bar = document.getElementById("yellow-bar");
+  bar.style.display = "none";
+}
+
+// PRICE RANGE
+addEventListener(
+  "input",
+  (e) => {
+    let _t = e.target;
+    _t.parentNode.style.setProperty(`--${_t.id}`, +_t.value);
+  },
+  false
+);

@@ -59,7 +59,8 @@ body {
   color: #464646;
 }
 
-ul {
+ul,
+ol {
   list-style: none;
 }
 
@@ -69,6 +70,10 @@ iframe {
 
 address {
   font-style: normal;
+}
+
+input[type="submit"] {
+  display: none;
 }
 
 a:link,
@@ -121,6 +126,15 @@ a:visited {
   text-transform: uppercase;
 }
 
+.uppercase-2x_spacing {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.font-size-18px {
+  font-size: 1.8rem;
+}
+
 .icon-before::before {
   padding-right: 1.3rem;
 }
@@ -150,17 +164,20 @@ a:visited {
   height: 40px;
 }
 
-.btn:link:active {
+.btn:link:active,
+.btn:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
 button.btn {
   border: none;
   background: initial;
-  font: inherit;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 700;
   font-size: 1.8rem;
   text-transform: uppercase;
   letter-spacing: 0.2em;
+  line-height: inherit;
 }
 
 /* REUSABLE GRID */
